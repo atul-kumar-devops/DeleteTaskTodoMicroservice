@@ -1,18 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: delete-task-ingress
-  annotations:
-    kubernetes.io/ingress.class: addon-http-application-routing
+  name: todo-delete-task-api-ingress
 spec:
+  ingressClassName: ingress-nginx-controller
   rules:
-  - host: delete-task.devopsinsiders.online
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: delete-task
-            port: 
-              number: 80
+    - host: delete-tasks-api.applicationtesting.online
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: todo-delete-task-api
+                port:
+                  number: 80
