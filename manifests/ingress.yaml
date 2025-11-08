@@ -12,6 +12,6 @@ spec:
             path: "/"
             backend:
               service:
-                name: todo-delete-task-api
+                name: todo-delete-tasks-api-service
                 port:
                   number: 80
