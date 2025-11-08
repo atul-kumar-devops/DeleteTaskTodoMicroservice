@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: todo-delete-task-api-ingress
 spec:
-  ingressClassName: ingress-nginx-controller
+  ingressClassName: nginx
   rules:
     - host: delete-tasks-api.applicationtesting.online
       http:
