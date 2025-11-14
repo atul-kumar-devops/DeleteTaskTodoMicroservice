@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: todo-delete-task-api-ingress
 spec:
-  ingressClassName: agic
+  ingressClassName: azure-application-gateway
   rules:
     - host: delete-tasks-api.applicationtesting.online
       http:
